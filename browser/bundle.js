@@ -157,11 +157,13 @@
 			// {code:language=java|borderStyle=solid|theme=RDark|linenumbers=true|collapse=true}
 			lang = langMap[lang] || ''
 			var param = {
-				language: lang,
 				borderStyle: 'solid',
 				theme: 'RDark', // dark is good
 				linenumbers: true,
 				collapse: false
+			}
+			if(lang != ''){
+				param['language']=lang	
 			}
 			var lineCount = _.split(code, '\n').length
 			if (lineCount > MAX_CODE_LINE) {
